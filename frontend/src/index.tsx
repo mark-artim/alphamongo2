@@ -8,7 +8,7 @@ import {
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Customer from './pages/customer/CustomerMain';
+// import Customer from './pages/customer/CustomerMain';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -1,6 +1,7 @@
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import { Paper } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { Menu, MenuItem } from '@mui/material';
 import { UserContext } from '../../utils/globalContext';
@@ -12,10 +13,11 @@ const Header = () => {
     const {user, setUser} = useContext(UserContext)
 
   return (
+    <Paper elevation={6} sx={{mb: "25px"}}>
     <header id='mainheader' className='mainheader'>
         <div className='logo'>
             { user !== '' ? <TheMenu /> : '' }
-            <Link to='/' style={{ fontSize: '2rem', color: 'black', textDecoration: 'none' }}>Jack ERP</Link>
+            <Link to='/' style={{ fontSize: '1.5rem', color: 'black', textDecoration: 'none' }}>Jack ERP</Link>
         </div>
         {user !== '' ? <div>Hello {user}!</div> : <div></div>}
         <div className='mainheader'>
@@ -41,7 +43,7 @@ const Header = () => {
         </div>
         
     </header>
-    
+    </Paper>
   )
 }
 

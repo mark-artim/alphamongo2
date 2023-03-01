@@ -68,11 +68,10 @@ export default function Customer() {
     const [cn, setCn] = useState('');
     const [inputValue, setInputValue] = useState('');
     const [value, setValue] = useState('');
-    const [customer, setCustomer] = useState('');
+    // const [customer, setCustomer] = useState(''); DELETE ME SOON
     const [mode, setMode] = useState('view');
     const [options, setOptions] = useState([]); // autocoplete options
     const [auto, setAuto] = useState(''); // Which autocomplete is user in?
-    const [edit, setEdit] = useState(false);
     const [debug, setDebug] = useState(false);
     const [open, setOpen] = useState(false);
  
@@ -291,8 +290,15 @@ export default function Customer() {
         setOpen(false);
     };
 
-    const handleChange = (event) => {
-        setMode(event.target.value);
+    const changeMode = (event) => {
+        if (event.target.value === "addnew") {
+            formik.resetForm({ values: ''});
+            setMode(event.target.value);
+        } else if (mode === "addnew" && event.target.value !== "addnew" && formik.dirty) {
+            setMode(mode)
+        } else {
+            setMode(event.target.value);
+        }
       };
         
     return (
@@ -349,9 +355,9 @@ export default function Customer() {
                             />
                 <FormControl component="fieldset">
                 <FormLabel component="legend">Mode</FormLabel>
-                    <RadioGroup row aria-label="gender" name="gender1" value={mode} onChange={handleChange}>
+                    <RadioGroup row aria-label="gender" name="gender1" value={mode} onChange={changeMode}>
                         <FormControlLabel value="view" control={<Radio />} label="View" />
-                        <FormControlLabel value="edit" control={<Radio />} label="Edit" />
+                        <FormControlLabel value="edit" disabled={!cn} control={<Radio />} label="Edit" />
                         <FormControlLabel value="addnew" control={<Radio />} label="Add New" />
                     </RadioGroup>
                 </FormControl>
@@ -365,7 +371,7 @@ export default function Customer() {
                     >
                     {mode==="addnew" ? "Add New" : "Save"}
                 </Button>
-                <Button variant="contained" color="error" sx={{ ml: "5rem", mt: '1rem', width: '6%', height: '2.5rem' }}onClick={handleClickOpen}>
+                <Button disabled={ mode==="edit" ? false : true }variant="contained" color="error" sx={{ ml: "5rem", mt: '1rem', width: '6%', height: '2.5rem' }} onClick={handleClickOpen} >
                 Delete
                 </Button>
                 <Dialog

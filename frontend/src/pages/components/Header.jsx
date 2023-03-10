@@ -17,7 +17,7 @@ const Header = () => {
     <header id='mainheader' className='mainheader'>
         <div className='logo'>
             { user !== '' ? <TheMenu /> : '' }
-            <Link to='/' style={{ fontSize: '1.5rem', color: 'black', textDecoration: 'none' }}>Jack ERP</Link>
+            <Link to='/' style={{ fontSize: '2rem', color: 'black', textDecoration: 'none', fontWeight: '900' }}>Jack ERP</Link>
         </div>
         {user !== '' ? <div>Hello {user}!</div> : <div></div>}
         <div className='mainheader'>

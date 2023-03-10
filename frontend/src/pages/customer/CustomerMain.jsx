@@ -303,6 +303,7 @@ export default function Customer() {
         
     return (
         <div>
+            <h1 className='pageHeader center'>Customer Administration</h1>
             {/* <CustomerNav/> */}
             {/* FORM HEADER CONTROL BUTTONS, ETC */}
                 <form onSubmit={formik.handleSubmit}>

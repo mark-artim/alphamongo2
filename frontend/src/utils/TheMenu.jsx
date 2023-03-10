@@ -41,8 +41,51 @@ export function TheMenu() {
                     }}
                 >Product Admin</MenuItem>
             </SubMenu>
+            <SubMenu label="Order Entry">
+                {/* <SubMenu> */}
+                <MenuItem
+                    value="Sales Order Entry"
+                    onClick={(e) => {
+                    console.log(`[MenuItem] ${e.value} clicked`);
+                    e.stopPropagation = true;
+                    e.keepOpen = false;
+                    navigate("/soe");
+                    }}
+                >Sales Order Entry 1</MenuItem>
+                <MenuItem
+                    value="Sales Order Entry"
+                    onClick={(e) => {
+                    console.log(`[MenuItem] ${e.value} clicked`);
+                    e.stopPropagation = true;
+                    e.keepOpen = false;
+                    navigate("/soe2");
+                    }}
+                >Sales Order Entry 2</MenuItem>
+                <MenuItem
+                    value="Sales Order Entry"
+                    onClick={(e) => {
+                    console.log(`[MenuItem] ${e.value} clicked`);
+                    e.stopPropagation = true;
+                    e.keepOpen = false;
+                    navigate("/soe3");
+                    }}
+                >Sales Order Entry 3</MenuItem>
+                {/* </SubMenu> */}
+            </SubMenu>
             <SubMenu label="Sales Order">
                 <MenuItem
+                value="Sales Order Entry"
+                onClick={(e) => {
+                 console.log(`[MenuItem] ${e.value} clicked`);
+                  e.stopPropagation = true;
+                  e.keepOpen = false;
+                  navigate("/soe");
+                }}
+                >Sales Order Entry 2</MenuItem>
+                
+            </SubMenu>
+            <SubMenu label="Sales Order">
+            <MenuItem
                 value="Sales Order Entry"
                 onClick={(e) => {
                  console.log(`[MenuItem] ${e.value} clicked`);

@@ -238,6 +238,7 @@ export default function Product() {
 
       return (
         <div>
+            <h1 className='pageHeader center'>Product Administration</h1>
             {/* FORM HEADER CONTROL BUTTONS, ETC */}
                 <form onSubmit={formik.handleSubmit}>
                 <Grid container mx='2rem' rowSpacing={5} columnSpacing={{ xs: 12}}>

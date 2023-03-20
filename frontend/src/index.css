@@ -12,7 +12,7 @@ code {
     monospace;
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;@300;@400;700&family=Ubuntu+Condensed&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;@300;@400;700&family=Ubuntu+Condensed&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@100&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@100;300&display=swap'); */
 
@@ -136,7 +136,7 @@ body {
   flex-wrap: wrap
 }
 
-// HERE Stuff
+/* HERE Stuff */
 
 #map {
   width: 95%;
@@ -150,7 +150,7 @@ body {
   font-weight: bold;
 }
 
-// Tables Stuff for React Table in SOE
+/* Tables Stuff for React Table in SOE */
 
 table {
   font-family: Arial, Helvetica, sans-serif;

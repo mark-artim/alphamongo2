@@ -70,6 +70,7 @@ const loginUser = asyncHandler(async (req, res, next) => {
     // if(!validPassword) return res.status(400).send('Invalid user name or password.')
 
     if(user && (await bcrypt.compare(password, user.password))) {
+        console.log('JWT ',process.env.JWT_SECRET)
         res.json({
             _id: user.id,
             name: user.name,

@@ -1,6 +1,9 @@
 {
   "name": "alphamongo2",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.x"
+  },
   "description": "Alpha on Mongo attempt Two",
   "main": "server.js",
   "scripts": {

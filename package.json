@@ -29,6 +29,7 @@
     "gulp": "^4.0.2",
     "gulp-zip": "^5.1.0",
     "nodemon": "^2.0.20",
+    "simple-svelte-autocomplete": "^2.5.2",
     "webpack-stream": "^7.0.0"
   }
 }

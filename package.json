@@ -9,7 +9,8 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "ENVIRONMENT=$ENVIRONMENT webpack",
-    "prod-build": "ENVIRONMENT='production' gulp"
+    "prod-build": "ENVIRONMENT='production' gulp",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=FALSE NPM install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Mark Artim",
   "license": "GPL-3.0-or-later",

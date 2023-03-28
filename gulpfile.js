@@ -1,11 +1,10 @@
 
 const { src, dest, series, parallel } = require('gulp');
-// const del = require('del'); //apparently out of date code
+// const del = require('del'); //who the fuck knows??
 const fs   = require('fs');
 const zip = require('gulp-zip');
 const log = require('fancy-log');
 const webpack_stream = require('webpack-stream');
-// const webpack_config = require('./backend/webpack.config.js');
 const webpack_config = require('./backend/webpack.config')
 var exec = require('child_process').exec;
 
